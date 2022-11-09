@@ -1,14 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Messaging;
 
 namespace MyRest
 {
     public class Restaurant
     {
         private readonly List<Table> _tables = new();
+
+        private readonly Producer _producer =
+            new("BookingNotification", "localhost");
 
         public Restaurant()
         {
@@ -41,7 +40,11 @@ namespace MyRest
 
                 await Task.Delay(1000 * 5);
 
-                Console.WriteLine(table is null ? "Все столы заняты" : $"Ваш столик {table.Id}");
+                //Console.WriteLine(table is null ? "Все столы заняты" : $"Ваш столик {table.Id}");
+
+                _producer.Send(table is null
+                    ? $"УВЕДОМЛЕНИЕ: К сожалению, сейчас все столики заняты"
+                    : $"УВЕДОМЛЕНИЕ: Готово! Ваш столик номер {table.Id}");
             });
         }
 
