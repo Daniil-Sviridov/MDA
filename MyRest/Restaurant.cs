@@ -1,4 +1,4 @@
-﻿using Messaging;
+﻿using MyRest.Messaging;
 
 namespace MyRest
 {

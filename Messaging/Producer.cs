@@ -2,7 +2,7 @@
 using System.Text;
 using RabbitMQ.Client;
 
-namespace Messaging
+namespace MyRest.Messaging
 {
     public class Producer
     {

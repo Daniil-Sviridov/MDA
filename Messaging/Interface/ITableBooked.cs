@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Messaging
+namespace MyRest.Messaging
 {
     public interface ITableBooked
     {

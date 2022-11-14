@@ -1,5 +1,5 @@
-﻿using Messaging;
-using Microsoft.Extensions.Hosting;
+﻿using Microsoft.Extensions.Hosting;
+using MyRest.Messaging;
 using System.Text;
 
 namespace MyRest.Notification

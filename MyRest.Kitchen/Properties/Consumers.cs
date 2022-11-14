@@ -1,5 +1,5 @@
 ﻿using MassTransit;
-using Messaging;
+using MyRest.Messaging;
 
 namespace MyRest.Kitchen.Consumers
 {

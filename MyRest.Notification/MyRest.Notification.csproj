@@ -8,12 +8,16 @@
   </PropertyGroup>
 
 	<ItemGroup>
+		<PackageReference Include="GreenPipes" Version="4.0.1" />
+		<PackageReference Include="MassTransit" Version="8.0.8" />
+		<PackageReference Include="MassTransit.RabbitMQ" Version="8.0.8" />
+		<PackageReference Include="RabbitMQ.Client" Version="6.4.0" />
 		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
 		<PackageReference Include="System.ServiceModel.Syndication" Version="6.0.0" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\Messaging\Messaging.csproj" />
+	  <ProjectReference Include="..\Messaging\MyRest.Messaging.csproj" />
 	</ItemGroup>
 	
 </Project>
