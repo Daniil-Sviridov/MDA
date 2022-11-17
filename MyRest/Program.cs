@@ -6,18 +6,24 @@ var rest = new Restaurant();
 
 while (true)
 {
-    Console.WriteLine("Hello, забранируйте столик? \n 1 - уведомим по смс(асинхроно) " +
+    /*Console.WriteLine("Hello, забранируйте столик? \n 1 - уведомим по смс(асинхроно) " +
         "\n 2 - ожидайте по телефону(синхроно)" +
         "\n 3 - Освободить (асинхронно)" +
         "\n 4 - Освободить (синхроно)");
 
     int.TryParse(Console.ReadLine(), out var choise);
+    */
 
+    await Task.Delay(10000);
+
+    Console.WriteLine("Привет! Желаете забронировать столик?");
     var stopWathc = new Stopwatch();
 
     stopWathc.Start();
 
-    switch (choise)
+    rest.BookFreeTableAsync(1);
+
+    /*switch (choise)
     {
         case 1:
             rest.BookFreeTableAsync(1);
@@ -39,7 +45,7 @@ while (true)
         default:
             Console.WriteLine("1,2, 3 или 4.");
             continue;
-    }
+    }*/
 
     Console.WriteLine("Спасибо!!!");
 
