@@ -9,8 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddMassTransit(x =>
 {
-    x.AddConsumer<NotifierTableBookedConsumer>();
-    x.AddConsumer<KitchenReadyConsumer>();
+    x.AddConsumer<NotifyConsumer>();
 
     x.UsingRabbitMq((context, cfg) =>
     {

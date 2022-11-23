@@ -16,5 +16,7 @@ namespace MyRest.Messaging
         public Guid ClientId => throw new NotImplementedException();
 
         public Dish? PreOrder => throw new NotImplementedException();
+
+        object ITableBooked.PreOrder => throw new NotImplementedException();
     }
 }

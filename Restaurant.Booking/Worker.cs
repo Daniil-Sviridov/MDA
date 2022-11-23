@@ -1,8 +1,13 @@
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Threading;
+using System.Threading.Tasks;
 using MassTransit;
 using Microsoft.Extensions.Hosting;
 using MyRest.Messaging;
 
-namespace MyRest
+namespace MyRest.Booking
 {
     public class Worker : BackgroundService
     {

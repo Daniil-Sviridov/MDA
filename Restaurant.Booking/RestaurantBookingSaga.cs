@@ -1,10 +1,10 @@
 ﻿using System;
 using Automatonymous;
 using MassTransit;
-using MyRest.Consumers;
+using MyRest.Booking.Consumers;
 using MyRest.Messaging;
 
-namespace MyRest
+namespace MyRest.Booking
 {
     public sealed class RestaurantBookingSaga : MassTransitStateMachine<RestaurantBooking>
     {

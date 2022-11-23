@@ -1,6 +1,6 @@
-﻿using MyRest.Booking;
+﻿using System;
 
-namespace MyRest.Consumers
+namespace MyRest.Booking.Consumers
 {
     public interface IBookingExpire
     {

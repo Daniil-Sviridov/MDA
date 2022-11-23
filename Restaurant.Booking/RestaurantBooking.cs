@@ -2,7 +2,7 @@
 using Automatonymous;
 using MassTransit;
 
-namespace MyRest
+namespace MyRest.Booking
 {
     public class RestaurantBooking : SagaStateMachineInstance
     {

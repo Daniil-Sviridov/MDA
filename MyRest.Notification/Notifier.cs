@@ -1,4 +1,5 @@
-﻿using System.Collections.Concurrent;
+﻿using MyRest.Messaging;
+using System.Collections.Concurrent;
 
 namespace MyRest.Notification
 {
@@ -8,5 +9,6 @@ namespace MyRest.Notification
         {
             Console.WriteLine($"[OrderID: {orderId}] Уважаемый клиент {clientId}! {message}");
         }
+
     }
 }

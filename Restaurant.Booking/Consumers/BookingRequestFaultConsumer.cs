@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using MassTransit;
 using MyRest.Messaging;
 
-namespace MyRest.Consumers
+namespace MyRest.Booking.Consumers
 {
     public class BookingRequestFaultConsumer : IConsumer<Fault<IBookingRequest>>
     {
