@@ -1,14 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MyRest
+﻿namespace MyRest
 {
     public enum State
     {
         Free = 0,
+        Booked = 1
+    }
+
+    public enum TableState
+    {
+        /// <summary>
+        /// Стол свободен
+        /// </summary>
+        Free = 0,
+
+        /// <summary>
+        /// Стол занят
+        /// </summary>
         Booked = 1
     }
 }

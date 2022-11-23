@@ -2,7 +2,6 @@
 using MassTransit;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
 using MyRest.Notification;
 using MyRest.Notification.Consumers;
 

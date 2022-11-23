@@ -12,9 +12,14 @@ namespace MyRest.Kitchen
             _bus = bus;
         }
 
-        public void CheckKitchenReady(Guid orderId, Dish? dish)
+        public bool CheckKitchenReady(Guid orderId, Dish? dish)
         {
-            _bus.Publish<IKitchenReady>(new KitchenReady(orderId, true));
+            return true;
+        }
+
+        internal void CheckKitchenReady(Guid orderId, object preOrder)
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Messaging\MyRest.Messaging.csproj" />
+    <ProjectReference Include="..\MyRest.Notification\MyRest.Notification.csproj" />
   </ItemGroup>
 
 </Project>

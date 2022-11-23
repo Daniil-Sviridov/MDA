@@ -29,25 +29,17 @@ namespace MyRest
 
         }
 
-        public void BookFreeTableAsync(int countOfPerson)
+    
+        public async Task<bool?> BookFreeTableAsync(int countOfPersons)
         {
-            Console.WriteLine("Добрый день! Подождите секундочку ....");
+            Console.WriteLine($"Спасибо за Ваше обращение, я подберу столик и подтвержу вашу бронь," +
+                              "Вам придет уведомление");
 
-            Task.Run(async () =>
-            {
-                var table = _tables.FirstOrDefault(t => t.SeatsCount > countOfPerson && t.State == State.Free);
-                table?.SetState(State.Booked);
-
-                await Task.Delay(1000 * 5);
-
-                //Console.WriteLine(table is null ? "Все столы заняты" : $"Ваш столик {table.Id}");
-
-                _producer.Send(table is null
-                    ? $"УВЕДОМЛЕНИЕ: К сожалению, сейчас все столики заняты"
-                    : $"УВЕДОМЛЕНИЕ: Готово! Ваш столик номер {table.Id}");
-            });
+            var table = _tables.FirstOrDefault(t => t.SeatsCount > countOfPersons
+                                                        && t.State == State.Free);
+            // await Task.Delay(100 * 5); //у нас нерасторопные менеджеры, 5 секунд они находятся в поисках стола
+            return table?.SetState(State.Booked);
         }
-
 
         public void FreeTable(int id)
         {
