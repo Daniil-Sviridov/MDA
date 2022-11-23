@@ -27,7 +27,7 @@ builder.Services.AddMassTransit(x =>
 });
 
 builder.Services.AddSingleton<Notifier>();
-builder.Services.AddMassTransitHostedService(true);
+//builder.Services.AddMassTransitHostedService(true);
 
 var app = builder.Build();
 

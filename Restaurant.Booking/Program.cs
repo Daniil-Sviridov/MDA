@@ -48,7 +48,7 @@ namespace MyRest.Booking
                         
                     });
                     
-                    services.AddMassTransitHostedService();
+                   // services.AddMassTransitHostedService();
 
                     services.AddTransient<RestaurantBooking>();
                     services.AddTransient<RestaurantBookingSaga>();
