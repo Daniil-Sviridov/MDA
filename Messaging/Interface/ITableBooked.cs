@@ -9,6 +9,5 @@ namespace MyRest.Messaging
         public bool Success { get; }
 
         public DateTime CreationDate { get; }
-        object PreOrder { get; }
     }
 }

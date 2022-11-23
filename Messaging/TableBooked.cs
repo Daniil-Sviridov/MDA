@@ -12,11 +12,5 @@ namespace MyRest.Messaging
         public Guid OrderId { get; }
         public bool Success { get; }
         public DateTime CreationDate { get; }
-
-        public Guid ClientId => throw new NotImplementedException();
-
-        public Dish? PreOrder => throw new NotImplementedException();
-
-        object ITableBooked.PreOrder => throw new NotImplementedException();
     }
 }

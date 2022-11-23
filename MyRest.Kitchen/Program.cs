@@ -1,8 +1,8 @@
 ﻿using MassTransit;
 using Microsoft.AspNetCore.Builder;
 using MyRest.Kitchen.Consumers;
-using MyRest.Notification;
 using Microsoft.Extensions.DependencyInjection;
+using MyRest.Kitchen;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -33,7 +33,7 @@ builder.Services.AddMassTransit(x =>
     });
 });
 
-builder.Services.AddSingleton<Notifier>();
+builder.Services.AddSingleton<Manager>();
 //builder.Services.AddMassTransitHostedService(true);
 
 var app = builder.Build();
