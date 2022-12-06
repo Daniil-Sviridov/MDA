@@ -53,6 +53,7 @@ namespace MyRest.Booking
                     services.AddTransient<RestaurantBooking>();
                     services.AddTransient<RestaurantBookingSaga>();
                     services.AddTransient<Restaurant>();
+                    services.AddSingleton<IInMemoryRepository<IBookingRequest>, InMemoryRepository<IBookingRequest>>();
 
                     services.AddHostedService<Worker>();
                 });
