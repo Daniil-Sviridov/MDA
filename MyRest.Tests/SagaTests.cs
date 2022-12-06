@@ -8,7 +8,6 @@ using MyRest.Booking;
 using MyRest.Booking.Consumers;
 using MyRest.Messaging;
 using MyRest.Messaging.InMemoryDb;
-using MyRest.Kitchen;
 using MyRest.Kitchen.Consumers;
 
 
