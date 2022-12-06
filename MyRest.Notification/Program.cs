@@ -27,7 +27,13 @@ builder.Services.AddMassTransit(x =>
 });
 
 builder.Services.AddSingleton<Notifier>();
-//builder.Services.AddMassTransitHostedService(true);
+
+builder.Services.Configure<MassTransitHostOptions>(options =>
+{
+    options.WaitUntilStarted = true;
+    options.StartTimeout = TimeSpan.FromSeconds(30);
+    options.StopTimeout = TimeSpan.FromMinutes(1);
+});
 
 var app = builder.Build();
 

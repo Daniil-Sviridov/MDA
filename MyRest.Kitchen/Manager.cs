@@ -3,7 +3,7 @@ using MyRest.Messaging;
 
 namespace MyRest.Kitchen
 {
-    internal class Manager
+    public class Manager
     {
         private readonly IBus _bus;
 
@@ -17,9 +17,5 @@ namespace MyRest.Kitchen
             return true;
         }
 
-        internal void CheckKitchenReady(Guid orderId, object preOrder)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

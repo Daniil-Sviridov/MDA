@@ -2,14 +2,14 @@
 using System.Text;
 using RabbitMQ.Client;
 
-namespace MyRest.Messaging
+namespace MyRest1.Messaging
 {
-    public class Producer
+    public class Producer1
     {
         private readonly string _queueName;
         private readonly string _hostName;
 
-        public Producer(string queueName, string hostName)
+        public Producer1(string queueName, string hostName)
         {
             _queueName = queueName;
             _hostName = "shark.rmq.cloudamqp.com"; //hostName;

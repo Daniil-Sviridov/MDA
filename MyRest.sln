@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyRest.Messaging", "Messagi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyRest.Kitchen", "MyRest.Kitchen\MyRest.Kitchen.csproj", "{DA34E65C-85CE-450D-9D1D-A0A262DB86DD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyRest.Test", "MyRest.Test\MyRest.Test.csproj", "{59827954-AC7D-4CAB-9D2B-9B3E69E69B99}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyRest.Tests", "MyRest.Tests\MyRest.Tests.csproj", "{0671DE23-DABF-4157-BF3F-B54746432A4A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +35,10 @@ Global
 		{DA34E65C-85CE-450D-9D1D-A0A262DB86DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA34E65C-85CE-450D-9D1D-A0A262DB86DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA34E65C-85CE-450D-9D1D-A0A262DB86DD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{59827954-AC7D-4CAB-9D2B-9B3E69E69B99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{59827954-AC7D-4CAB-9D2B-9B3E69E69B99}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{59827954-AC7D-4CAB-9D2B-9B3E69E69B99}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{59827954-AC7D-4CAB-9D2B-9B3E69E69B99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0671DE23-DABF-4157-BF3F-B54746432A4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0671DE23-DABF-4157-BF3F-B54746432A4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0671DE23-DABF-4157-BF3F-B54746432A4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0671DE23-DABF-4157-BF3F-B54746432A4A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

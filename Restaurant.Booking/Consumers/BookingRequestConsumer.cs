@@ -3,6 +3,8 @@ using System.Threading.Tasks;
 using MassTransit;
 using MyRest.Messaging;
 using Microsoft.Extensions.Logging;
+using MyRest.Messaging.InMemoryDb;
+using System.Linq;
 
 namespace MyRest.Booking.Consumers
 {

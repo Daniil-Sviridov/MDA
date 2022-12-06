@@ -1,9 +1,7 @@
 ﻿using System;
-using GreenPipes;
-using MassTransit;
-using Microsoft.Extensions.DependencyInjection;
+using System.Text;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
-using MyRest.Booking.Consumers;
 
 namespace MyRest.Booking
 {
@@ -11,51 +9,13 @@ namespace MyRest.Booking
     {
         public static void Main(string[] args)
         {
-            Console.OutputEncoding = System.Text.Encoding.UTF8;
+            Console.OutputEncoding = Encoding.UTF8;
             CreateHostBuilder(args).Build().Run();
         }
 
-        private static IHostBuilder CreateHostBuilder(string[] args) =>
-            Host.CreateDefaultBuilder(args)
-                .ConfigureServices((hostContext, services) =>
-                {
-                    services.AddMassTransit(x =>
-                    {
-                        x.AddConsumer<RestaurantBookingRequestConsumer>()
-                            .Endpoint(e =>
-                            {
-                                e.Temporary = true;
-                            });
-                        
-                        x.AddConsumer<BookingRequestFaultConsumer>()
-                            .Endpoint(e =>
-                            {
-                                e.Temporary = true;
-                            });
-
-                        x.AddSagaStateMachine<RestaurantBookingSaga, RestaurantBooking>()
-                            .Endpoint(e => e.Temporary = true)
-                            .InMemoryRepository();
-
-                        x.AddDelayedMessageScheduler();
-
-                        x.UsingRabbitMq((context, cfg) =>
-                        {
-                            cfg.UseDelayedMessageScheduler();
-                            cfg.UseInMemoryOutbox();
-                            cfg.ConfigureEndpoints(context);
-                        });
-                        
-                    });
-                    
-                   // services.AddMassTransitHostedService();
-
-                    services.AddTransient<RestaurantBooking>();
-                    services.AddTransient<RestaurantBookingSaga>();
-                    services.AddTransient<Restaurant>();
-                    services.AddSingleton<IInMemoryRepository<IBookingRequest>, InMemoryRepository<IBookingRequest>>();
-
-                    services.AddHostedService<Worker>();
-                });
+        private static IHostBuilder CreateHostBuilder(string[] args)
+        {
+            return Host.CreateDefaultBuilder(args).ConfigureWebHostDefaults(webBuilder => { webBuilder.UseStartup<Startup>(); });
+        }
     }
 }
